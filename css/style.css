@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     transition: all 0.4s ease;;
+    
 }
 
 
@@ -325,4 +326,37 @@ header {
 nav.scrolled {
     background-color: #202020; /* Dark color when scrolled */
     box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+::selection {
+    /* Change highlight background color to black */
+    background: rgb(193,11,11);
+    /* Change highlight text color to red */
+    color: #ffffff;
+  }
+
+
+  
+  #img1, #img2 {
+    width: 100%; /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    display: block;
+}
+
+#img1 { 
+    display: block; 
+}
+
+#img2 { 
+    display: none; 
+}
+
+@media all and (max-width: 800px) {
+    #img1 { 
+        display: none; 
+    }
+    #img2 { 
+        display: block; 
+    }
 }
