@@ -41,3 +41,14 @@ body.addEventListener("click" , e =>{
         nav.classList.remove("active");
     }
 });
+
+
+window.addEventListener("scroll", function() {
+  var navbar = document.querySelector("nav");
+  if (window.scrollY > 50) { // You can adjust the value to trigger the change earlier or later
+      navbar.classList.add("scrolled");
+  } else {
+      navbar.classList.remove("scrolled");
+  }
+});
+

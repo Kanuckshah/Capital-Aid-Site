@@ -1,4 +1,4 @@
-/* ===== Google Font Import - Poppins ===== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
@@ -12,13 +12,12 @@
 
 
 
-/* ===== Colours ===== */
 :root{
-  background: rgb(168,46,38);
-  background: radial-gradient(circle at 10% 20%, rgb(238, 56, 56) 0%, rgba(206, 21, 0, 0.92) 90.1%);
-    --nav-color: rgb(245, 245, 245);
-    --side-nav: rgb(245, 245, 245);
-    --text-color: rgb(219, 28, 14);
+    background: rgb(193,11,11);
+    background: white;
+    --nav-color: rgba(193, 11, 11, 0);
+    --side-nav: rgb(193,11,11);
+    --text-color: rgb(255, 255, 255);
     --search-bar: #F2F2F2;
     --search-text: #010718;
 }
@@ -89,7 +88,7 @@ nav .nav-bar .logo a{
 }
 
 .nav-bar .nav-links li{
-    margin: 0 5px;
+    margin: 0 10px;
     list-style: none;
 }
 
@@ -99,7 +98,12 @@ nav .nav-bar .logo a{
     font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.nav-links .big {
+    padding-right: 15;
 }
 
 .nav-links li a::before{
@@ -291,4 +295,34 @@ body.dark .search-field i{
         display: block;
         margin-top: 20px;
     }
+}
+
+
+
+
+header {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  /* Header/Logo Title */
+  .header {
+    height: 125vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    background: rgb(193,11,11);
+    color: white;
+    font-size: 30px;
+    background-image: url(/images/hero_3.jpg);
+    background-size: cover; /* Ensure the image covers the full section */
+    background-position: center bottom; /* Adjust the image to start from the bottom */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    align-items: center; /* Vertically center any content inside */
+    justify-content: center; /* Horizontally center the content */
+    padding: 0; /* No padding */
+}
+
+nav.scrolled {
+    background-color: #202020; /* Dark color when scrolled */
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
