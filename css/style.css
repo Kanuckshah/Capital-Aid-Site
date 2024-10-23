@@ -377,6 +377,7 @@ header {
     }
 }
 
+
 .button {
     position: absolute; /* Position buttons absolutely within the header */
     top: 50%; /* Center vertically */
@@ -397,6 +398,7 @@ header {
 .button1, .button2 {
     display: inline-block;
     padding: 15px 30px;
+    margin-left: -0.5%;
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
@@ -425,10 +427,17 @@ header {
 
 @media (max-width: 800px) {
     .button {
-        padding: 12px 24px; /* Adjust padding for smaller screens */
+        padding: 12px 50px; /* Adjust padding for smaller screens */
+        margin-left: 150px;
         font-size: 16px; /* Adjust font size */
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        }
+        
     }
-}
+
+
 
 .text-box {
     margin-left: 44vw;
