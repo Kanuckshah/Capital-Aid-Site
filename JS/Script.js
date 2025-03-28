@@ -1,56 +1,65 @@
-const body = document.querySelector("body"),
-      nav = document.querySelector("nav"),
-      modeToggle = document.querySelector(".dark-light"),
-      searchToggle = document.querySelector(".searchToggle"),
-      sidebarOpen = document.querySelector(".sidebarOpen"),
-      siderbarClose = document.querySelector(".siderbarClose");
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.close-btn');
 
-      let getMode = localStorage.getItem("mode");
-          if(getMode && getMode === "dark-mode"){
-            body.classList.add("dark");
-          }
+    function openMenu() {
+        mobileMenu.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
 
-// js code to toggle dark and light mode
-      modeToggle.addEventListener("click" , () =>{
-        modeToggle.classList.toggle("active");
-        body.classList.toggle("dark");
+    function closeMenu() {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Allow scrolling again
+    }
 
-        // js code to keep user selected mode even page refresh or file reopen
-        if(!body.classList.contains("dark")){
-            localStorage.setItem("mode" , "light-mode");
-        }else{
-            localStorage.setItem("mode" , "dark-mode");
-        }
-      });
+    if (hamburger && mobileMenu && closeBtn) {
+        hamburger.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
 
-// js code to toggle search box
-        searchToggle.addEventListener("click" , () =>{
-        searchToggle.classList.toggle("active");
-      });
- 
-      
-//   js code to toggle sidebar
-sidebarOpen.addEventListener("click" , () =>{
-    nav.classList.add("active");
-});
-
-body.addEventListener("click" , e =>{
-    let clickedElm = e.target;
-
-    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-        nav.classList.remove("active");
+        // Close menu when clicking on a mobile link
+        const mobileLinks = document.querySelectorAll('.mobile-links a, .mobile-social a, .signup-btn-mobile');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    } else {
+        console.error('One or more elements not found.');
     }
 });
 
 
-window.addEventListener("scroll", function() {
-  var navbar = document.querySelector("nav");
-  if (window.scrollY > 50) { // You can adjust the value to trigger the change earlier or later
-      navbar.classList.add("scrolled");
-  } else {
-      navbar.classList.remove("scrolled");
-  }
-});
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  
+    // Button hover effects
+    const buttons = document.querySelectorAll('.ca-btn');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.style.transform = 'translateY(-3px) scale(1.05)';
+      });
+      
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  });
