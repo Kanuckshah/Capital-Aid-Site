@@ -414,7 +414,6 @@ footer {
 
 
 
-/* Mentor Hero Section */
 /* Mentor Hero Section - Mobile First Approach */
 .mentor-hero {
   position: relative;
@@ -422,7 +421,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: white; /* Changed from #f8f9fa to match desktop */
   overflow: hidden;
 }
 
@@ -523,14 +522,16 @@ footer {
   object-fit: cover;
 }
 
+/* Updated gradient background for all screen sizes */
 .mentor-bg-design {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgb(230, 57, 71) 0%, rgba(230,57,70,0) 70%);
+  background: linear-gradient(135deg, rgba(230,57,70,0.15) 0%, rgba(230,57,70,0) 70%);
   z-index: 1;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* Tablet Layout (768px and up) */
@@ -539,7 +540,7 @@ footer {
     padding: 40px;
     min-height: 80vh;
   }
-  
+
   .mentor-btn-group {
     flex-direction: row;
     justify-content: center;
@@ -547,11 +548,6 @@ footer {
   
   .mentor-hero-image {
     height: 400px;
-  }
-  
-  .mentor-bg-design {
-    width: 50%;
-    background: linear-gradient(135deg, rgba(230,57,70,0.15) 0%, rgba(230,57,70,0) 70%);
   }
 }
 
@@ -579,12 +575,11 @@ footer {
     flex: 1;
     height: 450px;
   }
-  
-  .mentor-bg-design {
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-  }
 }
 
+.mentor-bg-design{
+  width: 50%;
+}
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
   .mentor-hero-image {
@@ -683,7 +678,6 @@ footer {
   --ca-dark: #1a1a1a;
   --ca-light: #f8f9fa;
   --ca-gray: #6c757d;
-  color: var(--ca-dark);
   --ca-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -691,7 +685,7 @@ footer {
 
 /* Hero Section */
 .ca-about-hero {
-  height: 100vh;
+  height: 90vh;
   min-height: 600px;
   position: relative;
   display: flex;
@@ -736,12 +730,14 @@ footer {
   animation: fadeInUp 0.8s ease-out forwards 0.7s;
 }
 
+
+
 .hero-title span {
-  color: var(--ca-primary);
-  display: inline-block;
-  opacity: 0;
-  animation: pulse 1s ease-out forwards 1.2s;
+  color: white;
 }
+
+
+
 
 .hero-subtitle {
   font-size: clamp(1rem, 3vw, 1.3rem);
@@ -799,15 +795,16 @@ footer {
 }
 
 .ca-btn-secondary {
-  background: transparent;
-  color: white;
+  background: white;
+  color: rgb(0, 0, 0);
   border: 2px solid white;
 }
 
 .ca-btn-secondary:hover {
-  background: white;
-  color: var(--ca-dark);
+  background: transparent;
+  color: white;
   transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(211, 211, 211, 0.3);
 }
 
 /* Scroll indicator */
@@ -1213,7 +1210,12 @@ html {
     width: 44px;
     height: 44px;
     font-size: 1.2rem;
+    text-decoration: none;
   }
+}
+
+.ca-team-social a i {
+  text-decoration: none;
 }
 
 
@@ -1239,5 +1241,164 @@ html {
   
   .ca-team-category {
       margin-bottom: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mentorship Hero Section */
+.mentorship-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2b2d42 100%);
+  overflow: hidden;
+  padding: 2rem;
+  color: white;
+}
+
+.mentorship-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.mentorship-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.mentorship-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mentorship-title span {
+  color: #e63946;
+  position: relative;
+}
+
+.mentorship-title span:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e63946;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: underlineGrow 1.5s ease-in-out forwards 1s;
+}
+
+.mentorship-subtitle {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.mentorship-cta {
+  margin-top: 3rem;
+  animation: fadeIn 2s ease-out;
+}
+
+.mentorship-cta p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.mentorship-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: #e63946;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+  transform: translateY(0);
+  font-size: 1.1rem;
+}
+
+.mentorship-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(230, 57, 70, 0.4);
+  background: #f04d5a;
+}
+
+.mentorship-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.15;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 15%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.8) 0%, transparent 15%),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.8) 0%, transparent 15%);
+  background-size: 200% 200%;
+  animation: particleMove 20s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes underlineGrow {
+  from {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes particleMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
