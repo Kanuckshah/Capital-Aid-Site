@@ -63,3 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+
+  // Tab Switching Functionality
+document.querySelectorAll('.tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons and embeds
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.form-embed').forEach(embed => embed.classList.remove('active'));
+    
+    // Add active class to clicked button
+    button.classList.add('active');
+    
+    // Show corresponding embed
+    const tabName = button.getAttribute('data-tab');
+    document.getElementById(`${tabName}-embed`).classList.add('active');
+  });
+});

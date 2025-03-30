@@ -1871,7 +1871,7 @@ html {
 }
 
 .contact-card {
-  background: white;
+  background: #f3f3f3;
   border-radius: 16px;
   padding: 2.5rem;
   width: 100%;
@@ -1905,7 +1905,7 @@ html {
 
 .instagram-card .contact-icon {
   background: rgba(233, 89, 80, 0.1);
-  color: #E95950;
+  color: #e96750;
 }
 
 .linkedin-card .contact-icon {
@@ -1974,5 +1974,234 @@ html {
   
   .contact-card {
     max-width: 100%;
+  }
+}
+
+
+
+/* Animated Signup Section */
+.animated-signup-section {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f3ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.signup-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(230, 57, 70, 0.15);
+}
+
+.signup-header {
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.signup-title {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.signup-title span {
+  color: #e63946;
+  position: relative;
+}
+
+.signup-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e63946;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: underlineGrow 1s ease-out forwards 0.5s;
+}
+
+.signup-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-switcher {
+  display: inline-flex;
+  background: rgba(230, 57, 70, 0.1);
+  border-radius: 50px;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  background: transparent;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background: #e63946;
+  color: white;
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.embed-container {
+  position: relative;
+  min-height: 400px;
+  padding: 1rem;
+}
+
+.form-embed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1rem 2rem 2rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-embed.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed rgba(230, 57, 70, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  background: rgba(230, 57, 70, 0.03);
+}
+
+.newsletter-placeholder {
+  color: #e63946;
+}
+
+.scheduling-placeholder {
+  color: #2b2b2b;
+}
+
+.form-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-placeholder h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-placeholder p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.placeholder-shimmer {
+  width: 80%;
+  height: 150px;
+  background: linear-gradient(90deg, rgba(230,57,70,0.05) 0%, rgba(230,57,70,0.1) 50%, rgba(230,57,70,0.05) 100%);
+  border-radius: 8px;
+  animation: shimmer 2s infinite linear;
+  background-size: 200% 100%;
+}
+
+.signup-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #f9f9f9;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.hover-underline {
+  color: #e63946;
+  text-decoration: none;
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #e63946;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes underlineGrow {
+  from { transform: scaleX(0); transform-origin: right; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-container {
+    margin: 0 1rem;
+  }
+  
+  .signup-title {
+    font-size: 1.8rem;
+  }
+  
+  .embed-container {
+    min-height: 350px;
+  }
+  
+  .form-placeholder {
+    padding: 1.5rem;
   }
 }
