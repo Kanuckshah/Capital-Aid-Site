@@ -1418,30 +1418,58 @@ html {
 
 /* Main Container */
 .capital-aid-tutoring {
-  padding: 6rem 2rem;
-  background: #f8fafc;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+  overflow: hidden;
 }
 
 .ca-tutoring-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center child elements */
 }
+
 
 /* Header */
 .ca-tutoring-intro {
   text-align: center;
   margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .ca-tutoring-title {
-  font-size: clamp(2rem, 6vw, 2.8rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .ca-tutoring-title span {
   color: #e63946;
+  position: relative;
+}
+
+.ca-tutoring-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.ca-tutoring-title:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .ca-tutoring-subtitle {
@@ -1449,53 +1477,73 @@ html {
   color: #555;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Subject Grid */
+.ca-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Subject Blocks */
 .ca-subject-block {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+  width: 100%; 
+  max-width: 800px; /* Adjust this value to control the width of the centered blocks */
+  margin-bottom: 1.5rem; /* Space between blocks */
+}
+
+
+.ca-subject-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 .ca-subject-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem 2rem;
-  background: rgba(230, 57, 70, 0.05);
+  background: linear-gradient(135deg, rgba(230, 57, 70, 0.08) 0%, rgba(230, 57, 70, 0.03) 100%);
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .ca-subject-icon {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   background: rgba(230, 57, 70, 0.1);
-  border-radius: 50%;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #e63946;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ca-subject-block:hover .ca-subject-icon {
+  transform: rotate(10deg) scale(1.1);
+  background: rgba(230, 57, 70, 0.15);
 }
 
 .ca-subject-name {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #1a1a1a;
   margin: 0;
+  font-weight: 700;
 }
 
 .ca-subject-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ca-subject-details {
-  flex: 1;
-  min-width: 300px;
   padding: 2rem;
 }
 
@@ -1506,71 +1554,67 @@ html {
 }
 
 .ca-topic-list li {
-  padding: 0.7rem 0;
+  padding: 0.8rem 0;
   color: #555;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 1rem;
+  gap: 1rem;
+  font-size: 1.05rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.ca-topic-list li:last-child {
+  border-bottom: none;
+}
+
+.ca-topic-list li:hover {
+  color: #333;
+  transform: translateX(5px);
 }
 
 .ca-topic-list i.fas.fa-check {
   color: #e63946;
   font-size: 0.9rem;
+  background: rgba(230, 57, 70, 0.1);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-/* Instructor Cards */
-.ca-instructor-card {
-  flex: 1;
-  min-width: 300px;
-  padding: 2rem;
-  background: #f9f9f9;
-  border-left: 1px solid rgba(0,0,0,0.05);
+.ca-topic-list li:hover i.fas.fa-check {
+  background: rgba(230, 57, 70, 0.2);
+  transform: scale(1.1);
 }
 
-.ca-instructor-bio {
-  padding: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.03);
-}
-
-.ca-instructor-name {
-  font-size: 1.3rem;
-  color: #1a1a1a;
-  margin-bottom: 0.5rem;
-}
-
-.ca-instructor-qualifications {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-.ca-instructor-style {
-  font-size: 1rem;
-  color: #555;
-  padding: 0.8rem;
-  background: rgba(230, 57, 70, 0.05);
-  border-radius: 6px;
-  border-left: 3px solid #e63946;
+/* Centered Blocks */
+.centered-block {
+  grid-column: 1 / -1;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* CTA Section */
 .ca-tutoring-cta {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 6rem; /* Extra space for absolute positioned blocks */
   padding: 3rem 2rem;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease-out;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .ca-cta-heading {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #1a1a1a;
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .ca-button-group {
@@ -1581,25 +1625,45 @@ html {
 }
 
 .ca-primary-button {
-  display: inline-block;
+  display: inline-flex;
   padding: 1rem 2.5rem;
-  background: #e63946;
+  background: linear-gradient(135deg, #e63946 0%, #d62839 100%);
   color: white;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid #e63946;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .ca-primary-button:hover {
-  background: white;
-  color: #e63946;
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+}
+
+.ca-primary-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.ca-primary-button:hover::after {
+  transform: translateX(100%);
 }
 
 .ca-secondary-button {
-  display: inline-block;
+  display: inline-flex;
   padding: 1rem 2.5rem;
   background: white;
   color: #1a1a1a;
@@ -1608,26 +1672,95 @@ html {
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .ca-secondary-button:hover {
-  background: #f5f5f5;
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+.ca-secondary-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(230,57,70,0.05) 0%, rgba(230,57,70,0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.ca-secondary-button:hover::after {
+  transform: translateX(100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animations for grid items */
+.ca-subject-block:nth-child(1) { animation-delay: 0.1s; }
+.ca-subject-block:nth-child(2) { animation-delay: 0.2s; }
+.ca-subject-block:nth-child(3) { animation-delay: 0.3s; }
+.ca-subject-block:nth-child(4) { animation-delay: 0.4s; }
+.ca-subject-block:nth-child(5) { animation-delay: 0.5s; }
+
+/* Desktop Layout for Centered Blocks */
+@media (min-width: 900px) {
+  .ca-subject-grid {
+    position: relative;
+    padding-bottom: 250px; /* Space for absolute positioned blocks */
+  }
+  
+  .centered-block {
+    position: absolute;
+    top: 100%;
+    margin-top: 2rem;
+    width: calc(50% - 1rem);
+    max-width: none;
+  }
+  
+  .centered-block:nth-child(4) {
+    left: 0;
+  }
+  
+  .centered-block:nth-child(5) {
+    right: 0;
+  }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .capital-aid-tutoring {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
   }
   
-  .ca-subject-content {
-    flex-direction: column;
+  .ca-subject-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .ca-instructor-card {
-    border-left: none;
-    border-top: 1px solid rgba(0,0,0,0.05);
+  .centered-block {
+    max-width: 100%;
   }
   
   .ca-button-group {
@@ -1638,7 +1771,24 @@ html {
   .ca-primary-button,
   .ca-secondary-button {
     width: 100%;
-    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ca-tutoring-title {
+    font-size: 2rem;
+  }
+  
+  .ca-tutoring-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .ca-subject-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .ca-subject-content {
+    padding: 1.5rem;
   }
 }
 
@@ -2997,3 +3147,4 @@ html {
     padding: 0 1rem;
   }
 }
+
