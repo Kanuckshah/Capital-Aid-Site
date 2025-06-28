@@ -987,7 +987,7 @@ html {
 
 /* Team Section - Larger Version */
 .ca-team-section {
-  padding: 10rem 2rem;
+  padding: 4rem 2rem;
   background: #f9fafc;
   position: relative;
   overflow: hidden;
@@ -3148,3 +3148,108 @@ html {
   }
 }
 
+
+
+
+/* Advisors Grid Layout */
+.ca-advisors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+}
+
+.ca-advisors-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.ca-advisors-row.centered {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 66%;
+}
+
+/* Remove bio space */
+.ca-team-info {
+  padding: 0 0.5rem;
+  min-height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .ca-advisors-row.centered {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 992px) {
+  .ca-advisors-row,
+  .ca-advisors-row.centered {
+    gap: 2rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ca-advisors-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ca-advisors-row.centered {
+    left: 0;
+    transform: none;
+  }
+}
+
+/* Advisors Section - Matching Team Spacing */
+.ca-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 5rem 3rem;
+  margin-bottom: 6rem;
+  justify-items: center;
+}
+
+/* Centered bottom row for 2 advisors */
+.centered-advisors {
+  max-width: 66.666%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove bio space */
+.ca-team-info {
+  padding: 0 0.5rem;
+  min-height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .centered-advisors {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 992px) {
+  .ca-team-grid {
+    gap: 4rem 2rem;
+  }
+  .centered-advisors {
+    max-width: 83.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ca-team-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .centered-advisors {
+    max-width: 100%;
+  }
+}
