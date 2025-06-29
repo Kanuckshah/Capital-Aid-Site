@@ -24,19 +24,71 @@
 
 
   <!-- Main Content -->
-  <section class="ca-about-hero">
-    <div class="ca-gradient-bg"></div>
-    <div class="ca-hero-overlay"></div>
-    <div class="ca-hero-content">
-      <h1 class="hero-title">Capital Aid Tutoring<span></span></h1>
-      <p class="hero-subtitle">Empowering students with personalized tutoring to build confidence and achieve academic
-        success</p>
-      <div class="ca-hero-buttons">
-        <a href="signup.html" class="ca-btn ca-btn-primary hero-btn-1">Sign up</a>
-        <a href="#learn-more" class="ca-btn ca-btn-secondary hero-btn-2">Learn More</a>
-      </div>
-    </div>
-  </section>
+
+
+ <section class="cat-hero-section">
+        <div class="cat-hero-bg-animated">
+            <!-- Animated elements -->
+            <div class="cat-gradient-orb orb-1"></div>
+            <div class="cat-gradient-orb orb-2"></div>
+            <div class="cat-gradient-orb orb-3"></div>
+            <!-- Animated grid overlay -->
+            <div class="cat-grid-pattern"></div>
+        </div>
+        
+        <div class="cat-content-container">
+            <h1 class="cat-main-title">
+                <span class="cat-typing-element" id="catTypingText"></span>
+                <span class="cat-cursor-blink" id="catCursor"></span>
+            </h1>
+            <p class="cat-subtitle-text">Empowering students with personalized tutoring to build confidence and achieve academic success</p>
+            <div class="cat-button-group">
+                <a href="signup.html" class="cat-action-btn cat-btn-primary cat-float-primary">Sign up</a>
+                <a href="#learn-more" class="cat-action-btn cat-btn-secondary cat-float-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = 'Capital Aid Tutoring';
+            const typingElement = document.getElementById('catTypingText');
+            const cursor = document.getElementById('catCursor');
+            let index = 0;
+            
+            function typeText() {
+                if (index < text.length) {
+                    if (text[index] === ' ') {
+                        typingElement.innerHTML += '&nbsp;';
+                    } else {
+                        typingElement.innerHTML += text[index];
+                    }
+                    
+                    // Apply highlight color to "Tutoring"
+                    if (index >= text.indexOf('Tutoring') && text[index] !== ' ') {
+                        const currentText = typingElement.innerHTML;
+                        const words = currentText.split('&nbsp;');
+                        if (words.length >= 3) {
+                            const lastWord = words[words.length - 1];
+                            words[words.length - 1] = `<span class="cat-text-highlight">${lastWord}</span>`;
+                            typingElement.innerHTML = words.join('&nbsp;');
+                        }
+                    }
+                    
+                    index++;
+                    setTimeout(typeText, 100);
+                } else {
+                    // Hide cursor after typing is complete
+                    setTimeout(() => {
+                        cursor.style.opacity = '0';
+                    }, 1000);
+                }
+            }
+            
+            // Start typing animation after a short delay
+            setTimeout(typeText, 500);
+        });
+    </script>
 
 
   <section class="capital-aid-tutoring" id="learn-more">
