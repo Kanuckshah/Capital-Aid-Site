@@ -247,3 +247,34 @@ body {
   opacity: 1;
   pointer-events: all;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-center,
+    .nav-right {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-center,
+  .nav-right {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
