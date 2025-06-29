@@ -1,249 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Aid</title>
-    <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Aid</title>
+  <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-container">
-                <img src="images/main-logo-black-transparent.png" alt="Company Logo" class="logo">
-            </div>
-            
-            <div class="nav-center">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="mentorship.html">Mentorship</a>
-                    <a href="tutoring.html">Tutoring</a>
-                </div>
-            </div>
-            
-            <div class="nav-right">
-                <div class="nav-social">
-                    <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <a href="signup.html" class="signup-btn">Sign Up</a>
-            </div>
-        </div>
-        
-        <button class="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+  <!-- Navbar -->
+  <div id="navbar"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <button class="close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-        <img src="images/main-logo-black-transparent.png" alt="Company Logo" class="mobile-logo">
-        <div class="mobile-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="mentorship.html">Mentorship</a>
-            <a href="tutoring.html">Tutoring</a>
-        </div>
-        <div class="mobile-social">
-            <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <a href="signup.html" class="signup-btn-mobile">Sign Up</a>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+
+  <!-- Main Content -->
+  <section class="ca-about-hero">
+    <div class="ca-gradient-bg"></div>
+    <div class="ca-hero-overlay"></div>
+    <div class="ca-hero-content">
+      <h1 class="hero-title">Capital Aid Tutoring<span></span></h1>
+      <p class="hero-subtitle">Empowering students with personalized tutoring to build confidence and achieve academic
+        success</p>
+      <div class="ca-hero-buttons">
+        <a href="signup.html" class="ca-btn ca-btn-primary hero-btn-1">Sign up</a>
+        <a href="#learn-more" class="ca-btn ca-btn-secondary hero-btn-2">Learn More</a>
+      </div>
     </div>
-    <div class="overlay"></div>
+  </section>
 
-    <!-- Main Content -->
-    <section class="ca-about-hero">
-        <div class="ca-gradient-bg"></div>
-        <div class="ca-hero-overlay"></div>
-        <div class="ca-hero-content">
-            <h1 class="hero-title">Capital Aid Tutoring<span></span></h1>
-            <p class="hero-subtitle">Empowering students with personalized tutoring to build confidence and achieve academic success</p>
-            <div class="ca-hero-buttons">
-                <a href="signup.html" class="ca-btn ca-btn-primary hero-btn-1">Sign up</a>
-                <a href="#learn-more" class="ca-btn ca-btn-secondary hero-btn-2">Learn More</a>
-            </div>
+
+  <section class="capital-aid-tutoring" id="learn-more">
+    <div class="ca-tutoring-container">
+      <!-- Header -->
+      <div class="ca-tutoring-intro">
+        <h2 class="ca-tutoring-title">Personalized <span>Tutoring</span> For All Ages</h2>
+        <p class="ca-tutoring-subtitle">1-on-1 support with <strong>experienced tutors</strong> in all core subjects.
+        </p>
+      </div>
+
+
+
+      <div class="ca-subject-block">
+        <div class="ca-subject-header">
+          <div class="ca-subject-icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3 class="ca-subject-name">General Tutoring</h3>
         </div>
-    </section>
-
-
-    <section class="capital-aid-tutoring" id="learn-more">
-        <div class="ca-tutoring-container">
-          <!-- Header -->
-          <div class="ca-tutoring-intro">
-            <h2 class="ca-tutoring-title">Personalized <span>Tutoring</span> for Ages 4-16</h2>
-            <p class="ca-tutoring-subtitle">1-on-1 support with <strong>experienced tutors</strong> in all core subjects.</p>
+        <div class="ca-subject-content">
+          <div class="ca-subject-details">
+            <ul class="ca-topic-list">
+              <li><i class="fas fa-check"></i> Any Core Subject In School</li>
+              <li><i class="fas fa-check"></i> Test-Taking In Subjects</li>
+            </ul>
           </div>
+          <div class="ca-instructor-card">
 
-
-
-          <div class="ca-subject-block">
-            <div class="ca-subject-header">
-              <div class="ca-subject-icon">
-                <i class="fa-solid fa-school"></i>
-              </div>
-              <h3 class="ca-subject-name">General Tutoring</h3>
-            </div>
-            <div class="ca-subject-content">
-              <div class="ca-subject-details">
-                <ul class="ca-topic-list">
-                  <li><i class="fas fa-check"></i> Any Core Subject In School</li>
-                  <li><i class="fas fa-check"></i> Test-Taking In Subjects</li>
-                </ul>
-              </div>
-              <div class="ca-instructor-card">
-               
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
       <br>
-          <!-- Math Tutoring -->
-          <div class="ca-subject-block">
-            <div class="ca-subject-header">
-              <div class="ca-subject-icon">
-                <i class="fas fa-square-root-alt"></i>
-              </div>
-              <h3 class="ca-subject-name">Mathematics</h3>
-            </div>
-            <div class="ca-subject-content">
-              <div class="ca-subject-details">
-                <ul class="ca-topic-list">
-                  <li><i class="fas fa-check"></i> Elementary Math (Ages 4-10)</li>
-                  <li><i class="fas fa-check"></i> Algebra & Geometry (Ages 11-14)</li>
-                  <li><i class="fas fa-check"></i> Complex Algebra & Linear Equations (Ages 15-16)</li>
-                </ul>
-              </div>
-              <div class="ca-instructor-card">
-
-              </div>
-            </div>
+      <!-- Math Tutoring -->
+      <div class="ca-subject-block">
+        <div class="ca-subject-header">
+          <div class="ca-subject-icon">
+            <i class="fas fa-square-root-alt"></i>
           </div>
+          <h3 class="ca-subject-name">Mathematics</h3>
+        </div>
+        <div class="ca-subject-content">
+          <div class="ca-subject-details">
+            <ul class="ca-topic-list">
+              <li><i class="fas fa-check"></i> Foundational Math Skills</li>
+              <li><i class="fas fa-check"></i> Algebra & Geometry Concepts</li>
+              <li><i class="fas fa-check"></i> Advanced Algebra & Linear Equations</li>
+              <li><i class="fas fa-check"></i> Calculus & Functions</li>
+            </ul>
+          </div>
+          <div class="ca-instructor-card">
+
+          </div>
+        </div>
+      </div>
       <br>
-          <!-- English Tutoring -->
-          <div class="ca-subject-block">
-            <div class="ca-subject-header">
-              <div class="ca-subject-icon">
-                <i class="fas fa-book-open"></i>
-              </div>
-              <h3 class="ca-subject-name">English & Writing</h3>
-            </div>
-            <div class="ca-subject-content">
-              <div class="ca-subject-details">
-                <ul class="ca-topic-list">
-                  <li><i class="fas fa-check"></i> Phonics & Reading (Ages 4-10)</li>
-                  <li><i class="fas fa-check"></i> Essay Writing (Ages 11-14)</li>
-                  <li><i class="fas fa-check"></i> Literary Analysis (Ages 15-16)</li>
-                </ul>
-              </div>
-              <div class="ca-instructor-card">
-            
-              </div>
-            </div>
+      <!-- English Tutoring -->
+      <div class="ca-subject-block">
+        <div class="ca-subject-header">
+          <div class="ca-subject-icon">
+            <i class="fas fa-book-open"></i>
           </div>
-      
-<br>
-          
-          <!-- Computer Science -->
-          <div class="ca-subject-block">
-            <div class="ca-subject-header">
-              <div class="ca-subject-icon">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <h3 class="ca-subject-name">Computer Science</h3>
-            </div>
-            <div class="ca-subject-content">
-              <div class="ca-subject-details">
-                <ul class="ca-topic-list">
-                  <li><i class="fas fa-check"></i> Scratch Coding (Ages 6-10)</li>
-                  <li><i class="fas fa-check"></i> Python (Ages 11-14)</li>
-                  <li><i class="fas fa-check"></i> Computer Science (Ages 15-16)</li>
-                </ul>
-              </div>
-              <div class="ca-instructor-card">
-                
-              </div>
-            </div>
+          <h3 class="ca-subject-name">English & Writing</h3>
+        </div>
+        <div class="ca-subject-content">
+          <div class="ca-subject-details">
+            <ul class="ca-topic-list">
+              <li><i class="fas fa-check"></i> Phonics & Reading (Ages 4-10)</li>
+              <li><i class="fas fa-check"></i> Essay Writing (Ages 11-14)</li>
+              <li><i class="fas fa-check"></i> Literary Analysis (Ages 15-16)</li>
+            </ul>
           </div>
+          <div class="ca-instructor-card">
+
+          </div>
+        </div>
+      </div>
+
       <br>
-          <!-- Academic Coaching -->
-          <div class="ca-subject-block">
-            <div class="ca-subject-header">
-              <div class="ca-subject-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h3 class="ca-subject-name">Consultations</h3>
-            </div>
-            <div class="ca-subject-content">
-              <div class="ca-subject-details">
-                <ul class="ca-topic-list">
-                  <li><i class="fas fa-check"></i> Study Skills & Time Management</li>
-                  <li><i class="fas fa-check"></i> Test-Taking Strategies</li>
-                  <li><i class="fas fa-check"></i> Confidence Building</li>
-                  <li><i class="fas fa-check"></i> General Conversation Related To Careers</li>
-                </ul>
-              </div>
-              <div class="ca-instructor-card">
-                
-              </div>
-            </div>
-          </div>
 
-          
-      
-          <!-- CTA Section -->
-          <div class="ca-tutoring-cta">
-            <h3 class="ca-cta-heading">Ready to Get Started?</h3>
-            <div class="ca-button-group">
-              <a href="signup.html" class="ca-primary-button">Sign Up</a>
-              <a href="about.html #team" class="ca-secondary-button">Meet The Team</a>
-            </div>
+      <!-- Computer Science -->
+      <div class="ca-subject-block">
+        <div class="ca-subject-header">
+          <div class="ca-subject-icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <h3 class="ca-subject-name">French</h3>
+        </div>
+        <div class="ca-subject-content">
+          <div class="ca-subject-details">
+            <ul class="ca-topic-list">
+              <li><i class="fas fa-check"></i> French Reading</li>
+              <li><i class="fas fa-check"></i> French Writing</li>
+              <li><i class="fas fa-check"></i> French Speaking</li>
+            </ul>
+          </div>
+          <div class="ca-instructor-card">
+
           </div>
         </div>
-      </section>
+      </div>
+      <br>
 
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="images/main-logo-white-transparent-zoom.png" alt="Company Logo" class="footer-logo">
-                <p>Providing exceptional mentorship services to help you achieve your goals.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-middle">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="mentorship.html">Mentorship</a></li>
-                    <li><a href="tutoring.html">Tutoring</a></li>
-                </ul>
-            </div>
 
-            
-            <div class="footer-right">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-envelope"></i> capitalaidott@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i>Ottawa, Ontario</p>
-            </div>
+
+      <!-- CTA Section -->
+      <div class="ca-tutoring-cta">
+        <h3 class="ca-cta-heading">Ready to Get Started?</h3>
+        <div class="ca-button-group">
+          <a href="signup.html" class="ca-primary-button">Sign Up</a>
+          <a href="about.html #team" class="ca-secondary-button">Meet The Team</a>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Capital Aid. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="JS/Script.js"></script>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+  <script src="JS/Script.js"></script>
 </body>
+
 </html>

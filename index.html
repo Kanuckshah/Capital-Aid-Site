@@ -1,344 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Aid</title>
-    <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Aid</title>
+  <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-container">
-                <img src="images/main-logo-black-transparent.png" alt="Company Logo" class="logo">
-            </div>
-            
-            <div class="nav-center">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="mentorship.html">Mentorship</a>
-                    <a href="tutoring.html">Tutoring</a>
-                </div>
-            </div>
-            
-            <div class="nav-right">
-                <div class="nav-social">
-                    <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <a href="signup.html" class="signup-btn">Sign Up</a>
-            </div>
-        </div>
-        
-        <button class="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+  <!-- Navbar -->
+  <div id="navbar"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <button class="close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-        <img src="images/main-logo-black-transparent.png" alt="Company Logo" class="mobile-logo">
-        <div class="mobile-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="mentorship.html">Mentorship</a>
-            <a href="tutoring.html">Tutoring</a>
-        </div>
-        <div class="mobile-social">
-            <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <a href="signup.html" class="signup-btn-mobile">Sign Up</a>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+
+  <!-- Main Content -->
+
+  <!-- Hero Section -->
+  <!-- Loading Screen -->
+  <div class="capital-loading-screen" id="loadingScreen">
+    <div class="capital-logo-container">
+      <div class="capital-logo">
+        <img src="images/main-logo-zoom-removebg-preview.png" alt="Capital Aid Logo">
+      </div>
     </div>
-    <div class="overlay"></div>
+    <h1 class="capital-company-name">Capital Aid</h1>
+    <p class="capital-loading-tagline">Empowering Growth Through Education</p>
+    <div class="capital-loading-dots">
+      <div class="capital-dot"></div>
+      <div class="capital-dot"></div>
+      <div class="capital-dot"></div>
+    </div>
+  </div>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <section class="mentor-hero" id="hero">
+      <div class="background-elements">
+        <div class="grid-pattern"></div>
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+      </div>
+      <div class="gradient-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="mentor-hero">
-        <div class="mentor-hero-container">
-          <div class="mentor-hero-content">
-            <h1 class="mentor-company">Capital <span class="mentor-accent">Aid</span></h1>
-            <p class="mentor-tagline">Empowering Growth Through Education, Mentorship & Opportunity</p>
-            <div class="mentor-btn-group">
-              <a href="about.html" class="mentor-btn mentor-btn-about">About Us</a>
-              <a href="signup.html" class="mentor-btn mentor-btn-signup">Sign Up</a>
-            </div>
-          </div>
-          <div class="mentor-hero-image">
-            <img src="images/Capital Header.jpg" alt="Team collaboration">
-          </div>
-        </div>
-        <div class="mentor-bg-design"></div>
-      </section>
-
-
-
-      
-      <section class="ca-about-structured">
-        <div class="ca-structured-container">
-          <!-- Header Section -->
-          <div class="ca-structured-header">
-            <h2>Who <span>We Are</span></h2>
-            <div class="ca-header-divider"></div>
-            <p class="ca-header-description">Capital Aid is a student-led, not-for-profit organization based in Ottawa, Canada.</p>
-          </div>
-      
-          <!-- Content Grid -->
-          <div class="ca-structured-grid">
-            <!-- Left Column: Image -->
-            <div class="ca-grid-image">
-              <div class="ca-image-container">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="Students collaborating" class="ca-structured-img">
-              </div>
-            </div>
-      
-            <!-- Right Column: Text + Cards -->
-            <div class="ca-grid-content">
-              <div class="ca-main-text">
-                <p>We help international and immigrant students adapt to the Canadian education system through free, high-quality tutoring. Founded by high school students, our mission is to bridge educational gaps and empower academic success.</p>
-              </div>
-      
-              <!-- Value Cards -->
-              <div class="ca-value-cards">
-                <div class="ca-value-card">
-                  <i class="fas fa-users"></i>
-                  <div>
-                    <h3>By Students, For Students</h3>
-                    <p>Founded and run by passionate peers who understand the challenges</p>
-                  </div>
-                </div>
-      
-                <div class="ca-value-card">
-                  <i class="fas fa-hand-holding-heart"></i>
-                  <div>
-                    <h3>Not-For-Profit Mission</h3>
-                    <p>Committed to keeping education accessible</p>
-                  </div>
-                </div>
-      
-                <div class="ca-value-card">
-                  <i class="fas fa-graduation-cap"></i>
-                  <div>
-                    <h3>Academic Integration</h3>
-                    <p>Specialized support for adapting to the Canadian curriculum</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="mentor-hero-container">
+        <div class="mentor-hero-content" id="heroContent">
+          <h1 class="mentor-company">Capital <span class="mentor-accent">Aid</span></h1>
+          <br>
+          <h2 class="mentor-tagline">
+            <span id="typing-wrapper"><span id="typing-text"></span><span class="cursor">|</span></span>
+          </h2>
 
 
-      <!--Mission-->
-      <section class="ca-learn-section" id="learn">
-        <div class="ca-learn-container">
-            <h2>Our <span>Mission</span></h2>
-            <div class="ca-learn-grid">
-                <div class="ca-learn-card">
-                    <div class="ca-learn-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Education</h3>
-                    <p><strong>Empowering</strong> international and immigrant students by providing accessible, <strong>high-quality</strong> tutoring to help them navigate the <strong>Canadian education system</strong> with <strong>confidence.</strong>
-                    </p>
-                </div>
-                <div class="ca-learn-card">
-                    <div class="ca-learn-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Mentorship</h3>
-                    <p><strong>Connecting</strong> students with <strong>experienced</strong> peers who provide academic <strong>guidance,</strong> and insights into success in <strong>Canadian schools.</strong></p>
-                </div>
-                <div class="ca-learn-card">
-                    <div class="ca-learn-icon">
-                        <i class="fa-solid fa-chalkboard"></i>
-                    </div>
-                    <h3>Tutoring</h3>
-                    <p>Offering personalized <strong>tutoring</strong> to strengthen core subject skills, <strong>improve</strong> study habits, and prepare students for <strong>academic excellence.</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Tutoring-->
-    <section class="ca-tutoring-preview-wide">
-        <div class="ca-wide-container">
-          <div class="ca-wide-header">
-            <div class="ca-wide-icon">
-              <i class="fa-solid fa-book"></i>
-            </div>
-            <h2>Personalized Tutoring for Ages 4-16</h2>
-            <p class="ca-wide-intro">1-on-1 support with experienced tutors in all core subjects.</p>
-          </div>
-          
-          <div class="ca-wide-subjects">
-            <!-- General Tutoring -->
-            <div class="ca-wide-card">
-              <div class="ca-wide-card-icon">
-                <i class="fa-solid fa-school"></i>
-              </div>
-              <h3>General Tutoring</h3>
-              <p>Comprehensive help across all subjects</p>
-            </div>
-            
-            <!-- Mathematics -->
-            <div class="ca-wide-card">
-              <div class="ca-wide-card-icon">
-                <i class="fas fa-square-root-alt"></i>
-              </div>
-              <h3>Mathematics</h3>
-              <p>From basic arithmetic to advanced algebra</p>
-            </div>
-            
-            <!-- English & Writing -->
-            <div class="ca-wide-card">
-              <div class="ca-wide-card-icon">
-                <i class="fas fa-book-open"></i>
-              </div>
-              <h3>English & Writing</h3>
-              <p>Reading, writing, and critical analysis</p>
-            </div>
-            
-            <!-- Computer Science -->
-            <div class="ca-wide-card">
-              <div class="ca-wide-card-icon">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <h3>Computer Science</h3>
-              <p>Coding fundamentals to advanced programming</p>
-            </div>
-            
-            <!-- Consultations -->
-            <div class="ca-wide-card">
-              <div class="ca-wide-card-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h3>Consultations</h3>
-              <p>Academic planning and strategy sessions</p>
-            </div>
-          </div>
-          
-          <div class="ca-wide-cta">
-            <a href="tutoring.html#learn-more" class="ca-wide-button">
-              Our Tutoring Program
-              <i class="fas fa-arrow-right"></i>
+          <div class="mentor-btn-group">
+            <a href="about.html" class="mentor-btn mentor-btn-about">
+              <span>About Us</span>
+            </a>
+            <a href="signup.html" class="mentor-btn mentor-btn-signup">
+              <span>Get Started</span>
             </a>
           </div>
         </div>
-      </section>
+        <div class="mentor-hero-image">
+          <img src="images/Capital Header.jpg" alt="Students learning together">
+        </div>
+      </div>
+    </section>
+  </div>
 
-      <!-- Join Our Mission Section -->
-      <section class="ca-join-mission">
-        <div class="ca-join-container">
-          <div class="ca-join-content">
-            <h2>Interested in Being Part of Our Mission?</h2>
-            <p>We're always looking for passionate individuals to join our team of tutors and mentors. Help us make a difference in students' lives while gaining valuable experience.</p>
-            <a href="signup.html" class="ca-join-button">Join Our Team</a>
-          </div>
-          <div class="ca-join-graphic">
-            <img src="images/team-collab.jpg" alt="Team collaboration" class="ca-join-img">
+  <script>
+    const text = "Empowering Growth Through Education, Mentorship & Opportunity";
+    const speed = 50; // typing speed
+    const delayBeforeStart = 4100; // 3 seconds
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(typeWriter, delayBeforeStart);
+    };
+  </script>
+
+
+
+  <script>
+    // Loading screen and main content animation
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingScreen = document.getElementById('loadingScreen');
+      const mainContent = document.getElementById('mainContent');
+      const heroContent = document.getElementById('heroContent');
+
+      // Hide loading screen after 3 seconds
+      setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+
+        // Show main content after loading screen fades
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+          mainContent.classList.add('show');
+
+          // Trigger hero animations
+          setTimeout(() => {
+            heroContent.classList.add('animate');
+          }, 300);
+        }, 500);
+      }, 3000);
+
+      // Enhanced button hover effects
+      const buttons = document.querySelectorAll('.mentor-btn');
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-5px) scale(1.02)';
+        });
+
+        button.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Parallax effect for floating orbs
+      window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth) - 0.5;
+        const y = (e.clientY / window.innerHeight) - 0.5;
+
+        const orbs = document.querySelectorAll('.floating-orb');
+        orbs.forEach((orb, index) => {
+          const speed = 0.02 * (index + 1);
+          const xOffset = x * 30 * speed;
+          const yOffset = y * 30 * speed;
+
+          orb.style.transform += ` translate(${xOffset}px, ${yOffset}px)`;
+        });
+      });
+
+      // Smooth scroll reveal effect
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Add subtle scroll animations
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const orbs = document.querySelectorAll('.floating-orb');
+
+        orbs.forEach((orb, index) => {
+          const speed = 0.1 * (index + 1);
+          orb.style.transform += ` translateY(${scrolled * speed}px)`;
+        });
+      });
+    });
+  </script>
+
+
+  <section class="ca-about-structured">
+    <div class="ca-structured-container">
+      <!-- Header Section -->
+      <div class="ca-structured-header">
+        <h2>Who <span>We Are</span></h2>
+        <div class="ca-header-divider"></div>
+        <p class="ca-header-description">Capital Aid is a student-led, not-for-profit organization based in Ottawa,
+          Canada.</p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="ca-structured-grid">
+        <!-- Left Column: Image -->
+        <div class="ca-grid-image">
+          <div class="ca-image-container">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="Students collaborating"
+              class="ca-structured-img">
           </div>
         </div>
-      </section>
 
-      <!-- Contact Section -->
-      <section class="elegant-contact-section" id="contact">
-        <div class="contact-container">
-          <div class="contact-header">
-            <h2>Connect With Us</h2>
-            <p>We'd love to hear from you! Reach out for tutoring inquiries or collaborations.</p>
+        <!-- Right Column: Text + Cards -->
+        <div class="ca-grid-content">
+          <div class="ca-main-text">
+            <p>We help international and immigrant students adapt to the Canadian education system through free,
+              high-quality tutoring. Founded by high school students, our mission is to bridge educational gaps and
+              empower academic success.</p>
           </div>
-          
-          <div class="contact-cards">
-            <!-- Email Card -->
-            <div class="contact-card email-card">
-              <div class="contact-icon">
-                <i class="fas fa-envelope-open-text"></i>
+
+          <!-- Value Cards -->
+          <div class="ca-value-cards">
+            <div class="ca-value-card">
+              <i class="fas fa-users"></i>
+              <div>
+                <h3>By Students, For Students</h3>
+                <p>Founded and run by passionate peers who understand the challenges</p>
               </div>
-              <h3>Email Us</h3>
-              <a href="mailto:capitalaidott@gmail.com"  class="contact-link">
-                capitalaidott@gmail.com
-              </a>
-              <div class="contact-cta">Get a response within 24 hours</div>
             </div>
-            
-            <!-- Instagram Card -->
-            <div class="contact-card instagram-card">
-              <div class="contact-icon">
-                <i class="fab fa-instagram"></i>
+
+            <div class="ca-value-card">
+              <i class="fas fa-hand-holding-heart"></i>
+              <div>
+                <h3>Not-For-Profit Mission</h3>
+                <p>Committed to keeping education accessible</p>
               </div>
-              <h3>Instagram</h3>
-              <a href="https://www.instagram.com/capitalaid613/"  target="_blank" class="contact-link">
-                @capitalaid613
-              </a>
-              <div class="contact-cta">See student success stories</div>
             </div>
-            
-            <!-- LinkedIn Card -->
-            <div class="contact-card linkedin-card">
-              <div class="contact-icon">
-                <i class="fab fa-linkedin-in"></i>
+
+            <div class="ca-value-card">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h3>Academic Integration</h3>
+                <p>Specialized support for adapting to the Canadian curriculum</p>
               </div>
-              <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank" class="contact-link">
-                Capital Aid Ott
-              </a>
-              <div class="contact-cta">Connect professionally</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
 
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="images/main-logo-white-transparent-zoom.png" alt="Company Logo" class="footer-logo">
-                <p>Providing exceptional mentorship services to help you achieve your goals.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/capitalaid613/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-
-            
-            
-            <div class="footer-middle">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="mentorship.html">Mentorship</a></li>
-                    <li><a href="tutoring.html">Tutoring</a></li>
-                </ul>
-            </div>
-
-            
-            <div class="footer-right">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-envelope"></i> capitalaidott@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i>Ottawa, Ontario</p>
-            </div>
+  <!--Mission-->
+  <section class="ca-learn-section" id="learn">
+    <div class="ca-learn-container">
+      <h2>Our <span>Mission</span></h2>
+      <div class="ca-learn-grid">
+        <div class="ca-learn-card">
+          <div class="ca-learn-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Education</h3>
+          <p><strong>Empowering</strong> international and immigrant students by providing accessible,
+            <strong>high-quality</strong> tutoring to help them navigate the <strong>Canadian education system</strong>
+            with <strong>confidence.</strong>
+          </p>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Capital Aid. All rights reserved.</p>
+        <div class="ca-learn-card">
+          <div class="ca-learn-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Mentorship</h3>
+          <p><strong>Connecting</strong> students with <strong>experienced</strong> peers who provide academic
+            <strong>guidance,</strong> and insights into success in <strong>Canadian schools.</strong></p>
         </div>
-    </footer>
+        <div class="ca-learn-card">
+          <div class="ca-learn-icon">
+            <i class="fa-solid fa-chalkboard"></i>
+          </div>
+          <h3>Tutoring</h3>
+          <p>Offering personalized <strong>tutoring</strong> to strengthen core subject skills, <strong>improve</strong>
+            study habits, and prepare students for <strong>academic excellence.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="JS/Script.js"></script>
+
+  <!-- Tutoring-->
+  <section class="ca-tutoring-preview-wide">
+    <div class="ca-wide-container">
+      <div class="ca-wide-header">
+        <div class="ca-wide-icon">
+          <i class="fa-solid fa-book"></i>
+        </div>
+        <h2>Personalized Tutoring for Ages 4-16</h2>
+        <p class="ca-wide-intro">1-on-1 support with experienced tutors in all core subjects.</p>
+      </div>
+
+      <div class="ca-wide-subjects">
+        <!-- General Tutoring -->
+        <div class="ca-wide-card">
+          <div class="ca-wide-card-icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3>General Tutoring</h3>
+          <p>Comprehensive help across all subjects</p>
+        </div>
+
+        <!-- Mathematics -->
+        <div class="ca-wide-card">
+          <div class="ca-wide-card-icon">
+            <i class="fas fa-square-root-alt"></i>
+          </div>
+          <h3>Mathematics</h3>
+          <p>From basic arithmetic to advanced algebra</p>
+        </div>
+
+        <!-- English & Writing -->
+        <div class="ca-wide-card">
+          <div class="ca-wide-card-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>English & Writing</h3>
+          <p>Reading, writing, and critical analysis</p>
+        </div>
+
+        <!-- Computer Science -->
+        <div class="ca-wide-card">
+          <div class="ca-wide-card-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Computer Science</h3>
+          <p>Coding fundamentals to advanced programming</p>
+        </div>
+
+        <!-- Consultations -->
+        <div class="ca-wide-card">
+          <div class="ca-wide-card-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Consultations</h3>
+          <p>Academic planning and strategy sessions</p>
+        </div>
+      </div>
+
+      <div class="ca-wide-cta">
+        <a href="tutoring.html#learn-more" class="ca-wide-button">
+          Our Tutoring Program
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Our Mission Section -->
+  <section class="ca-join-mission">
+    <div class="ca-join-container">
+      <div class="ca-join-content">
+        <h2>Interested in Being Part of Our Mission?</h2>
+        <p>We're always looking for passionate individuals to join our team of tutors and mentors. Help us make a
+          difference in students' lives while gaining valuable experience.</p>
+        <a href="signup.html" class="ca-join-button">Join Our Team</a>
+      </div>
+      <div class="ca-join-graphic">
+        <img src="images/team-collab.jpg" alt="Team collaboration" class="ca-join-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="elegant-contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Connect With Us</h2>
+        <p>We'd love to hear from you! Reach out for tutoring inquiries or collaborations.</p>
+      </div>
+
+      <div class="contact-cards">
+        <!-- Email Card -->
+        <div class="contact-card email-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <h3>Email Us</h3>
+          <a href="mailto:capitalaidott@gmail.com" class="contact-link">
+            capitalaidott@gmail.com
+          </a>
+          <div class="contact-cta">Get a response within 24 hours</div>
+        </div>
+
+        <!-- Instagram Card -->
+        <div class="contact-card instagram-card">
+          <div class="contact-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <h3>Instagram</h3>
+          <a href="https://www.instagram.com/capitalaid613/" target="_blank" class="contact-link">
+            @capitalaid613
+          </a>
+          <div class="contact-cta">See student success stories</div>
+        </div>
+
+        <!-- LinkedIn Card -->
+        <div class="contact-card linkedin-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/company/capital-aid-ott/" target="_blank" class="contact-link">
+            Capital Aid Ott
+          </a>
+          <div class="contact-cta">Connect professionally</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+
+  <script src="JS/Script.js"></script>
 </body>
+
 </html>
