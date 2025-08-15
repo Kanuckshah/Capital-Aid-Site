@@ -4211,3 +4211,19 @@ html {
         }
 
         
+
+        .ca-team-container {
+  padding-left: 60px;   /* was probably smaller before */
+  padding-right: 60px;
+}
+
+@media (max-width: 768px) {
+  .ca-team-container {
+    padding-left: 20px;  /* smaller on mobile */
+    padding-right: 20px;
+  }
+}
+.ca-team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}

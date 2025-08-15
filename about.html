@@ -13,39 +13,39 @@
 <body>
 
 
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
-<script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-</script>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
   <!-- Main Content -->
 
 
   <!-- Section 1: Hero -->
-<section class="hero-about">
+  <section class="hero-about">
     <div class="hero-animated-bg">
-        <!-- Animated elements -->
-        <div class="gradient-circle x1"></div>
-        <div class="gradient-circle x2"></div>
-        <div class="gradient-circle x3"></div>
-        <!-- Animated grid overlay -->
-        <div class="grid-overlay"></div>
+      <!-- Animated elements -->
+      <div class="gradient-circle x1"></div>
+      <div class="gradient-circle x2"></div>
+      <div class="gradient-circle x3"></div>
+      <!-- Animated grid overlay -->
+      <div class="grid-overlay"></div>
     </div>
-    
+
     <div class="hero-content-wrapper">
-        <h1 class="hero-heading">About <span class="hero-highlight">Capital Aid</span></h1>
-        <p class="hero-description">Empowering growth through education, mentorship, and opportunity</p>
-        <div class="hero-actions">
-            <a href="#about" class="hero-btn hero-btn-primary animate-float">Who Are We?</a>
-            <a href="#team" class="hero-btn hero-btn-secondary animate-float-delay">Meet The Team</a>
-        </div>
+      <h1 class="hero-heading">About <span class="hero-highlight">Capital Aid</span></h1>
+      <p class="hero-description">Empowering growth through education, mentorship, and opportunity</p>
+      <div class="hero-actions">
+        <a href="#about" class="hero-btn hero-btn-primary animate-float">Who Are We?</a>
+        <a href="#team" class="hero-btn hero-btn-secondary animate-float-delay">Meet The Team</a>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
@@ -135,7 +135,8 @@
           </div>
           <h3>Mentorship</h3>
           <p><strong>Connecting</strong> students with <strong>experienced</strong> peers who provide academic
-            <strong>guidance,</strong> and insights into success in <strong>Canadian schools.</strong></p>
+            <strong>guidance,</strong> and insights into success in <strong>Canadian schools.</strong>
+          </p>
         </div>
         <div class="ca-learn-card">
           <div class="ca-learn-icon">
@@ -223,8 +224,8 @@
               <div class="ca-team-info">
                 <h4>Linh Ngo</h4>
                 <p class="ca-team-role">Co-Founder & Director Of Communications</p>
-                <p class="ca-team-bio">Grade 10 student who focuses on leadership, academics, community voulenteering,
-                  and student sucess. I enjoy taking on challenges, passion projects, and learning new skills.</p>
+                <p class="ca-team-bio">Grade 10 student who focuses on leadership, academics, community volunteering,
+                  and student success. I enjoy taking on challenges, passion projects, and learning new skills.</p>
               </div>
             </div>
           </div>
@@ -236,28 +237,28 @@
         <div class="ca-team-category">
           <h3>Directors</h3>
           <div class="ca-team-grid">
-                    <!-- Director 1 -->
-        <div class="ca-team-card">
-          <div class="ca-team-img-wrapper">
-            <div class="ca-team-img-container">
-              <img src="images/Audrib-headshot.jpg" alt="David Kim" class="ca-team-img">
-              <div class="ca-team-overlay">
-                <div class="ca-team-social">
-                  <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="https://www.instagram.com/audi.amin9/" target="_blank" aria-label="Instagram"><i
-                      class="fab fa-instagram"></i></a>
+            <!-- Director 1 -->
+            <div class="ca-team-card">
+              <div class="ca-team-img-wrapper">
+                <div class="ca-team-img-container">
+                  <img src="images/Audrib-headshot.jpg" alt="David Kim" class="ca-team-img">
+                  <div class="ca-team-overlay">
+                    <div class="ca-team-social">
+                      <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.instagram.com/audi.amin9/" target="_blank" aria-label="Instagram"><i
+                          class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="ca-team-info">
+                <h4>Audrib Amin</h4>
+                <p class="ca-team-role">Director of Mentorship</p>
+                <p class="ca-team-bio">Grade 10 student passionate about mathematics, leadership, and making a positive
+                  impact. I enjoy playing soccer, exploring aviation, and helping others succeed.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="ca-team-info">
-            <h4>Audrib Amin</h4>
-            <p class="ca-team-role">Director of Mentorship</p>
-            <p class="ca-team-bio">Grade 10 student passionate about mathematics, leadership, and making a positive
-              impact. I enjoy playing soccer, exploring aviation, and helping others succeed.
-            </p>
-          </div>
-        </div>
             <!-- Director 2-->
             <div class="ca-team-card">
               <div class="ca-team-img-wrapper">
@@ -296,6 +297,7 @@
 
     <div class="ca-team-categories">
       <div class="ca-team-category">
+
         <!-- Top Row - 3 Advisors -->
         <div class="ca-team-row">
           <!-- Advisor 1 -->
@@ -409,132 +411,164 @@
             </div>
           </div>
         </div>
+
+        <!-- New Row - 1 Advisor -->
+        <div class="ca-team-row">
+          <!-- Advisor 7 -->
+          <div class="ca-team-card">
+            <div class="ca-team-img-wrapper">
+              <div class="ca-team-img-container">
+                <img src="images/Cindion.jpeg" alt="New Advisor Name" class="ca-team-img">
+                <div class="ca-team-overlay">
+                  <div class="ca-team-social">
+                    <a href="https://www.linkedin.com/in/cindion-huang-398575300/" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ca-team-info">
+              <h4>Cindion Huang</h4>
+              <p class="ca-team-role">English @ Havard 26'</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-  
-<!-- Timeline Section -->
-<section class="ca-timeline-section" id="timeline">
-  <div class="ca-timeline-container">
-    <div class="ca-timeline-header">
-      <div class="ca-section-title-container">
-        <h2 class="ca-section-title">Our <span class="ca-title-accent">Journey</span></h2>
-        <div class="ca-title-divider"></div>
+
+
+  <!-- Timeline Section -->
+  <section class="ca-timeline-section" id="timeline">
+    <div class="ca-timeline-container">
+      <div class="ca-timeline-header">
+        <div class="ca-section-title-container">
+          <h2 class="ca-section-title">Our <span class="ca-title-accent">Journey</span></h2>
+          <div class="ca-title-divider"></div>
+        </div>
+        <p class="ca-header-description">From an idea to a growing movement - how Capital Aid came to be</p>
       </div>
-      <p class="ca-header-description">From an idea to a growing movement - how Capital Aid came to be</p>
+
+      <div class="ca-timeline">
+        <!-- Timeline Item 1 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">June 2024</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>The Idea Was Born</h3>
+              <p>Capital Aid began as an idea among passionate students who saw the need for better educational support
+                for immigrant and international students.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">July 2024</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Executive Team Formed</h3>
+              <p>Our founding team of 5 dedicated students came together, each bringing unique skills to build the
+                organization.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">August 2024</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Curriculum Development</h3>
+              <p>We planned a comprehensive curriculum tailored to help students adapt to the Canadian education system.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">September 2024</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Tutoring Program Launched</h3>
+              <p>Began our first tutoring sessions at the start of the school year, helping students with core subjects
+                and study skills.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">October 2024</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Digital Presence Established</h3>
+              <p>Launched our website and Instagram to connect with more students and share our mission with the
+                community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 6 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">January 2025</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Tutoring Team Expands</h3>
+              <p>Grew our tutoring team to 15+ dedicated volunteers, allowing us to help more students than ever before.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 7 -->
+        <div class="ca-timeline-item">
+          <div class="ca-timeline-dot">
+            <div class="ca-dot-pulse"></div>
+          </div>
+          <div class="ca-timeline-date">Present Day</div>
+          <div class="ca-timeline-content">
+            <div class="ca-content-inner">
+              <h3>Ongoing Expansion</h3>
+              <p>Currently expanding our team to new cities and broadening our services to support students from diverse
+                backgrounds across Canada.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Arrow -->
+        <div class="ca-timeline-future">
+          <div class="ca-future-line"></div>
+          <div class="ca-future-arrow">
+            <i class="fas fa-arrow-right"></i>
+            <span>Our Future</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="ca-timeline">
-      <!-- Timeline Item 1 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">June 2024</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>The Idea Was Born</h3>
-            <p>Capital Aid began as an idea among passionate students who saw the need for better educational support for immigrant and international students.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 2 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">July 2024</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Executive Team Formed</h3>
-            <p>Our founding team of 5 dedicated students came together, each bringing unique skills to build the organization.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 3 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">August 2024</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Curriculum Development</h3>
-            <p>We planned a comprehensive curriculum tailored to help students adapt to the Canadian education system.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 4 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">September 2024</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Tutoring Program Launched</h3>
-            <p>Began our first tutoring sessions at the start of the school year, helping students with core subjects and study skills.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 5 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">October 2024</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Digital Presence Established</h3>
-            <p>Launched our website and Instagram to connect with more students and share our mission with the community.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 6 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">January 2025</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Tutoring Team Expands</h3>
-            <p>Grew our tutoring team to 15+ dedicated volunteers, allowing us to help more students than ever before.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 7 -->
-      <div class="ca-timeline-item">
-        <div class="ca-timeline-dot">
-          <div class="ca-dot-pulse"></div>
-        </div>
-        <div class="ca-timeline-date">Present Day</div>
-        <div class="ca-timeline-content">
-          <div class="ca-content-inner">
-            <h3>Ongoing Expansion</h3>
-            <p>Currently expanding our team to new cities and broadening our services to support students from diverse backgrounds across Canada.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Future Arrow -->
-      <div class="ca-timeline-future">
-        <div class="ca-future-line"></div>
-        <div class="ca-future-arrow">
-          <i class="fas fa-arrow-right"></i>
-          <span>Our Future</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <section class="ca-join-mission" id="perks">
@@ -678,15 +712,15 @@
 
 
   <!-- Footer -->
-     <div id="footer"></div>
+  <div id="footer"></div>
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
 
   <script src="JS/Script.js"></script>
 </body>
