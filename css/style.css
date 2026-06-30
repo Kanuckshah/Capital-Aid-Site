@@ -4764,3 +4764,22 @@ html {
     height: 5px;
   }
 }
+/* ===== Open registration banner ===== */
+a.hero-notification.hero-notification--open {
+  text-decoration: none;
+  border-color: rgba(16, 185, 129, 0.35);
+  background: rgba(240, 253, 244, 0.97);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.18);
+}
+a.hero-notification.hero-notification--open:hover {
+  border-color: rgba(16, 185, 129, 0.65);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.28);
+  background: rgba(220, 252, 231, 0.98);
+}
+a.hero-notification.hero-notification--open .notification-icon {
+  color: #10b981;
+}
+a.hero-notification.hero-notification--open .notification-text {
+  color: #065f46;
+  font-weight: 600;
+}

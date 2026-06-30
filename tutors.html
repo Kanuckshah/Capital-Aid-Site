@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Tutors | Capital Aid</title>
+  <meta name="description" content="Meet the Capital Aid tutors. Filter by grade (K–12) and subject to find the perfect match for your learning needs.">
+  <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tutors.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('navbar').innerHTML = data; });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="tutors-hero">
+    <div class="tutors-hero-bg">
+      <div class="tutors-orb orb-1"></div>
+      <div class="tutors-orb orb-2"></div>
+      <div class="tutors-orb orb-3"></div>
+      <div class="tutors-grid-overlay"></div>
+    </div>
+    <div class="tutors-hero-content">
+      <span class="tutors-badge"><i class="fas fa-graduation-cap"></i> Expert Tutors</span>
+      <h1 class="tutors-hero-title">Meet Our <span class="tutors-accent">Tutors</span></h1>
+      <p class="tutors-hero-subtitle">Passionate, experienced tutors ready to help you succeed — from Kindergarten through Grade 12</p>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="tutors-filter-section">
+    <div class="tutors-filter-container">
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-layer-group"></i> Grade Level</label>
+        <div class="grade-pills" id="gradePills">
+          <button class="grade-pill active" data-grade="all">All Grades</button>
+          <button class="grade-pill" data-grade="K">K</button>
+          <button class="grade-pill" data-grade="1">1</button>
+          <button class="grade-pill" data-grade="2">2</button>
+          <button class="grade-pill" data-grade="3">3</button>
+          <button class="grade-pill" data-grade="4">4</button>
+          <button class="grade-pill" data-grade="5">5</button>
+          <button class="grade-pill" data-grade="6">6</button>
+          <button class="grade-pill" data-grade="7">7</button>
+          <button class="grade-pill" data-grade="8">8</button>
+          <button class="grade-pill" data-grade="9">9</button>
+          <button class="grade-pill" data-grade="10">10</button>
+          <button class="grade-pill" data-grade="11">11</button>
+          <button class="grade-pill" data-grade="12">12</button>
+        </div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-book-open"></i> Subject</label>
+        <div class="subject-pills" id="subjectPills">
+          <button class="subject-pill active" data-subject="all">All Subjects</button>
+          <button class="subject-pill" data-subject="Mathematics">Mathematics</button>
+          <button class="subject-pill" data-subject="English">English</button>
+          <button class="subject-pill" data-subject="French">French</button>
+          <button class="subject-pill" data-subject="Science">Science</button>
+        </div>
+      </div>
+
+      <div class="filter-results-bar">
+        <span id="resultsCount" class="results-count">Showing <strong>6</strong> tutors</span>
+        <button class="reset-filters-btn" id="resetFilters">
+          <i class="fas fa-rotate-left"></i> Reset
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutors Grid -->
+  <section class="tutors-grid-section">
+    <div class="tutors-grid-container">
+      <div class="tutors-grid" id="tutorsGrid">
+
+        <!-- Zaynab -->
+        <a href="tutors/zaynab.html" class="tutor-card"
+           data-grades="K,1,2,3,4,5,6,7,8"
+           data-subjects="Mathematics,English,French,Science">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/Zaynab.png" alt="Zaynab" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">Zaynab</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Elementary</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-star"></i> All Subjects</span>
+            </div>
+            <p class="tutor-card-bio">Experienced working with children with autism, ADHD, and dyslexia. Adapts her teaching style to what works best for each individual student.</p>
+          </div>
+        </a>
+
+        <!-- Nathan Lalande -->
+        <a href="tutors/nathan.html" class="tutor-card"
+           data-grades="1,2,3,4,5,6"
+           data-subjects="French,Mathematics,English">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/Nathan.png" alt="Nathan Lalande" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">Nathan Lalande</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Gr. 1–6</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-language"></i> French</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-book-open"></i> English</span>
+            </div>
+            <p class="tutor-card-bio">Patient and approachable. Creates a positive, supportive environment and adapts his teaching style to each student's individual needs.</p>
+          </div>
+        </a>
+
+        <!-- Simra -->
+        <a href="tutors/simra.html" class="tutor-card"
+           data-grades="7,8,9,10,11,12"
+           data-subjects="Mathematics,Science">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/Simra.png" alt="Simra" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">Simra</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Gr. 7–12</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-calculator"></i> Mathematics</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-flask"></i> Science</span>
+            </div>
+            <p class="tutor-card-bio">Passionate about making sure students understand every concept thoroughly — and have fun in the process!</p>
+          </div>
+        </a>
+
+        <!-- Ayann -->
+        <a href="tutors/ayann.html" class="tutor-card"
+           data-grades="4,5,6,7,8,9"
+           data-subjects="Mathematics,English">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/Ayann.png" alt="Ayann" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">Ayann</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Gr. 4–9</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-calculator"></i> Mathematics</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-book-open"></i> English</span>
+            </div>
+            <p class="tutor-card-bio">Very adaptive — changes the way he teaches based on each student's unique learning style.</p>
+          </div>
+        </a>
+
+        <!-- James -->
+        <a href="tutors/james.html" class="tutor-card"
+           data-grades="1,2,3,4,5,6,9,10,11"
+           data-subjects="Mathematics,English">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/James.png" alt="James" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">James</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Gr. 9–11</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-calculator"></i> Mathematics</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-book-open"></i> English</span>
+            </div>
+            <p class="tutor-card-bio">Student-led sessions — he lets students identify their own areas of need and guides them through their learning journey.</p>
+          </div>
+        </a>
+
+        <!-- Owen -->
+        <a href="tutors/owen.html" class="tutor-card"
+           data-grades="1,2,3,4,5"
+           data-subjects="Mathematics">
+          <div class="tutor-card-img-wrap">
+            <img src="images/Tutors/Owen.png" alt="Owen" class="tutor-card-img">
+            <div class="tutor-card-overlay">
+              <span class="view-profile-btn">View Profile <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="tutor-card-body">
+            <h3 class="tutor-card-name">Owen</h3>
+            <div class="tutor-card-tags">
+              <span class="tutor-tag grade-tag"><i class="fas fa-layer-group"></i> Gr. 1–5</span>
+              <span class="tutor-tag subject-tag"><i class="fas fa-calculator"></i> Mathematics</span>
+            </div>
+            <p class="tutor-card-bio">Dedicated and hardworking, with a focus on real improvement and growth for every elementary student.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="tutors-empty" id="tutorsEmpty" style="display:none;">
+        <div class="empty-icon"><i class="fas fa-user-slash"></i></div>
+        <h3>No tutors match your filters</h3>
+        <p>Try adjusting your grade or subject selection.</p>
+        <button class="reset-filters-btn" onclick="document.getElementById('resetFilters').click()">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="tutors-cta-section">
+    <div class="tutors-cta-container">
+      <div class="tutors-cta-content">
+        <h2>Ready to get started?</h2>
+        <p>Choose a tutor above and book your first session — it's completely free.</p>
+        <a href="signup.html" class="tutors-cta-btn">Sign Up Today <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('footer').innerHTML = data; });
+  </script>
+
+  <script src="JS/Script.js"></script>
+  <script src="JS/tutors.js"></script>
+</body>
+
+</html>
