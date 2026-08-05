@@ -3,99 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Aid</title>
+    <title>Become a Tutor | Capital Aid</title>
+    <meta name="description" content="Apply to become a volunteer tutor at Capital Aid. Make a difference in students' lives, earn volunteer hours, and gain valuable leadership experience.">
     <link rel="icon" type="image/x-icon" href="images/Favicon-32x32-photoaidcom-cropped.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navbar -->
-   <div id="navbar"></div>
+    <div id="navbar"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
 
-<script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-</script>
+    <!-- Become a Tutor Hero Section -->
+    <section class="tutor-hero-section">
+      <div class="tutor-hero-container">
+        <span class="tutor-hero-badge"><i class="fas fa-hand-holding-heart"></i> Join Our Team</span>
+        <h1 class="tutor-hero-title">Become a <span>Tutor</span></h1>
+        <p class="tutor-hero-subtitle">
+          Inspire and empower students in our community. Share your knowledge, gain leadership experience, earn official volunteer hours, and help peers succeed.
+        </p>
 
-
-    <!-- Main Content -->
-
-
-    <section class="programs-section-wide">
-
-
-        <!-- Mentorship Program -->
-      <!--  <div class="program-card-wide mentorship-card-wide">
-          <div class="program-icon-wide">
-            <i class="fa-solid fa-user-graduate"></i>
+        <div class="tutor-highlights">
+          <div class="highlight-chip">
+            <i class="fas fa-clock"></i>
+            <span>Flexible Hours (2+ hrs/wk)</span>
           </div>
-          <h3>Mentorship Program</h3>
-          <p class="program-description-wide">Get personalized guidance from experienced mentors to navigate your academic journey</p>
-          <div class="program-form-wide">
-            <div class="form-embed-wrapper">
-              <div class="form-placeholder">
-                <i class="fas fa-user-graduate pulse"></i>
-                <p>Mentorship application form will appear here</p>
-              </div>
+          <div class="highlight-chip">
+            <i class="fas fa-certificate"></i>
+            <span>Volunteer Certificates</span>
+          </div>
+          <div class="highlight-chip">
+            <i class="fas fa-users"></i>
+            <span>1-on-1 Peer Support</span>
+          </div>
+          <div class="highlight-chip">
+            <i class="fas fa-award"></i>
+            <span>Reference Letters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutor Application Section (Embedded Google Form) -->
+    <section class="tutor-application-section" id="apply">
+      <div class="tutor-app-container">
+        <div class="tutor-app-header">
+          <h2>Tutor Application Form</h2>
+          <p>Please complete the application form below to apply. Our team will review your application and get back to you shortly!</p>
+        </div>
+
+        <div class="form-embed-card">
+          <div class="form-iframe-container">
+            <iframe 
+              src="https://forms.gle/FfLv5CDwcDTnwYCo9" 
+              width="100%" 
+              height="950" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0"
+              title="Capital Aid Tutor Application Form">
+              Loading application form…
+            </iframe>
+          </div>
+          <div class="form-fallback-bar">
+            <p><i class="fas fa-info-circle"></i> Having trouble displaying the form?</p>
+            <a href="https://forms.gle/FfLv5CDwcDTnwYCo9" target="_blank" rel="noopener noreferrer" class="form-direct-btn">
+              Open Application Form in New Tab <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Become a Tutor / Volunteer Benefits -->
+    <section class="tutor-benefits-section">
+      <div class="tutor-benefits-container">
+        <div class="section-title-center">
+          <h2>Why Tutor With <span>Capital Aid</span>?</h2>
+          <p>Join a supportive community committed to educational accessibility</p>
+        </div>
+
+        <div class="tutor-benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-award"></i>
             </div>
+            <h3>Earn Recognized Hours</h3>
+            <p>Receive verified community involvement hours, certificates, and personalized reference letters for college, university, and job applications.</p>
           </div>
-          <div class="program-footer-wide">
-            <p>Questions? <a href="mailto:capitalaidott@gmail.com">Email our mentorship team</a></p>
-          </div>
-        </div>  -->
-      
-        <!-- Tutoring Program -->
-        <div class="program-card-wide tutoring-card-wide">
-          <div class="program-icon-wide">
-            <i class="fa-solid fa-chalkboard-user"></i>
-          </div>
-          <h3>Tutoring Program</h3>
-          <p class="program-description-wide">Receive free academic support from our qualified tutors in various subjects</p>
-          <div class="program-form-wide">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScS803_kdA5aFRuzjebWLCfeXz_JXexvDwIXtw4a8HCrVmDwA/viewform?embedded=true" width="103%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-          </div>
-          <div class="program-footer-wide">
-            <p>Questions? <a href="mailto:capitalaidott@gmail.com">Email our tutoring team</a></p>
-          </div>
-        </div>
-      
-        <!-- Join the Team -->
-        <div class="program-card-wide join-card-wide">
-          <div class="program-icon-wide">
-            <i class="fa-solid fa-handshake-angle"></i>
-          </div>
-          <h3>Join Our Team</h3>
-          <p class="program-description-wide">Become a mentor or tutor and make a difference in students' lives</p>
-          <div class="join-content-wide">
-            <p>We're looking for passionate individuals with:</p>
-            <ul class="benefits-list-wide">
-              <li><i class="fas fa-check-circle"></i> Strong academic background</li>
-              <li><i class="fas fa-check-circle"></i> Excellent communication skills</li>
-              <li><i class="fas fa-check-circle"></i> Passion for helping others</li>
-              <li><i class="fas fa-check-circle"></i> 2+ hours weekly availability</li>
-            </ul>
-          </div>
-          <a href="https://forms.gle/6ZUSYR7rgZe13ebu6" class="join-button-wide">Apply Now <i class="fas fa-arrow-right"></i></a>
-          <div class="program-footer-wide">
-            <p>Learn about <a href="about.html#perks">volunteer benefits</a></p>
-          </div>
-        </div>
-      </section>
 
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Flexible Scheduling</h3>
+            <p>Tutoring sessions are scheduled around your availability. Commit as little as 2 hours a week according to your school workload.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heart-pulse"></i>
+            </div>
+            <h3>Make a Real Impact</h3>
+            <p>Directly help fellow students overcome academic challenges, build confidence, and navigate their educational journey successfully.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Enhance Your Resume</h3>
+            <p>Develop essential communication, mentoring, and leadership skills that stand out to future employers and admissions committees.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple Application Steps -->
+    <section class="tutor-steps-section">
+      <div class="tutor-steps-container">
+        <div class="section-title-center">
+          <h2>How It <span>Works</span></h2>
+          <p>Three easy steps to start tutoring with Capital Aid</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Fill Out the Form</h3>
+            <p>Complete the application above with your subjects of interest, availability, and background details.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Quick Onboarding</h3>
+            <p>Our team will reach out for a brief intro call to review your subjects and answer any questions.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Start Tutoring</h3>
+            <p>Get matched with students who need support and start making a positive difference!</p>
+          </div>
+        </div>
+
+        <div class="tutor-contact-callout">
+          <p><i class="fas fa-question-circle"></i> Have questions about becoming a tutor? Reach out to us anytime at <a href="mailto:capitalaidott@gmail.com">capitalaidott@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-      <div id="footer"></div>
-
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
+    <div id="footer"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    </script>
 
     <script src="JS/Script.js"></script>
 </body>

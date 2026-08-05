@@ -118,20 +118,49 @@ body {
   transform: translateY(-2px);
 }
 
-.signup-btn {
-  background-color: var(--primary);
-  color: var(--light);
-  padding: 0.6rem 1.2rem;
+.signup-btn,
+.become-tutor-btn {
+  background: linear-gradient(135deg, #e63946 0%, #b71c1c 100%);
+  color: #ffffff;
+  padding: 0.65rem 1.4rem;
   border-radius: 50px;
-  font-weight: 500;
-  transition: var(--transition);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(230, 57, 70, 0.5), 0 4px 14px rgba(230, 57, 70, 0.3);
+  animation: tutorPulseGlow 3s infinite ease-in-out;
 }
 
-.signup-btn:hover {
-  background-color: var(--dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.become-tutor-btn i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.signup-btn:hover,
+.become-tutor-btn:hover {
+  background: linear-gradient(135deg, #ff4d5a 0%, #d62828 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 28px rgba(230, 57, 70, 0.85), 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.become-tutor-btn:hover i {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+@keyframes tutorPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 14px rgba(230, 57, 70, 0.45), 0 4px 12px rgba(230, 57, 70, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.85), 0 6px 22px rgba(230, 57, 70, 0.5);
+  }
 }
 
 .hamburger {
@@ -212,22 +241,28 @@ body {
   font-size: 1.3rem;
 }
 
-.signup-btn-mobile {
-  background-color: var(--primary);
+.signup-btn-mobile,
+.become-tutor-btn-mobile {
+  background: linear-gradient(135deg, #e63946 0%, #b71c1c 100%);
   color: var(--light);
-  padding: 0.8rem;
+  padding: 0.85rem 1.2rem;
   border-radius: 50px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 18px rgba(230, 57, 70, 0.6);
+  animation: tutorPulseGlow 3s infinite ease-in-out;
 }
 
-.signup-btn-mobile:hover {
-  background-color: var(--dark);
-  transition-duration: 0.5s;
+.signup-btn-mobile:hover,
+.become-tutor-btn-mobile:hover {
+  background: linear-gradient(135deg, #ff4d5a 0%, #d62828 100%);
   transform: translateY(-2px);
-  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(230, 57, 70, 0.85);
 }
 
 .overlay {
