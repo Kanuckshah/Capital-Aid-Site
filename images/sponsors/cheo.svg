@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="cheoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0077b6"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="60" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="35" cy="30" r="18" fill="url(#cheoGrad)"/>
+  <!-- Cross Icon -->
+  <path d="M 32 20 H 38 V 27 H 45 V 33 H 38 V 40 H 32 V 33 H 25 V 27 H 32 Z" fill="#ffffff"/>
+  <text x="62" y="36" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="1">CHEO</text>
+  <text x="126" y="36" fill="#00b4d8" font-family="'Inter', sans-serif" font-weight="700" font-size="12">YNRA</text>
+</svg>

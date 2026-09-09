@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <rect width="180" height="60" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+  <!-- CTV Circles (Red, Green, Blue) -->
+  <circle cx="24" cy="30" r="10" fill="#e63946"/>
+  <text x="24" y="35" fill="#fff" font-family="'Inter', sans-serif" font-weight="900" font-size="12" text-anchor="middle">C</text>
+  <circle cx="42" cy="30" r="10" fill="#00a859"/>
+  <text x="42" y="35" fill="#fff" font-family="'Inter', sans-serif" font-weight="900" font-size="12" text-anchor="middle">T</text>
+  <circle cx="60" cy="30" r="10" fill="#0077b6"/>
+  <text x="60" y="35" fill="#fff" font-family="'Inter', sans-serif" font-weight="900" font-size="12" text-anchor="middle">V</text>
+  <text x="80" y="36" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="900" font-size="18" letter-spacing="1">NEWS</text>
+</svg>

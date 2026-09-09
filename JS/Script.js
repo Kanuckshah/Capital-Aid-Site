@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(checkNavLoaded);
             initMobileMenu();
             initOtherFeatures();
+            initFairCountdown();
+            initPipVideoWidget();
         }
     }, 100);
 
@@ -76,4 +78,89 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Community Fair Countdown Timer (Sept 19, 2026 @ 1:00 PM EST)
+    function initFairCountdown() {
+        const cdDays = document.getElementById('cd-days');
+        const cdHours = document.getElementById('cd-hours');
+        const cdMins = document.getElementById('cd-mins');
+        const cdSecs = document.getElementById('cd-secs');
+
+        if (!cdDays || !cdHours || !cdMins || !cdSecs) return;
+
+        const eventDate = new Date('September 19, 2026 11:00:00 EST').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                cdDays.innerText = '00';
+                cdHours.innerText = '00';
+                cdMins.innerText = '00';
+                cdSecs.innerText = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            cdDays.innerText = String(days).padStart(2, '0');
+            cdHours.innerText = String(hours).padStart(2, '0');
+            cdMins.innerText = String(minutes).padStart(2, '0');
+            cdSecs.innerText = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
+
+    // Floating Picture-in-Picture Corner Video Controls
+    function initPipVideoWidget() {
+        const widget = document.getElementById('pipVideoWidget');
+        const minimizeBtn = document.getElementById('pipMinimizeBtn');
+        const closeBtn = document.getElementById('pipCloseBtn');
+
+        if (!widget || !minimizeBtn || !closeBtn) return;
+
+        // Check if user previously closed it in this session
+        if (sessionStorage.getItem('pipWidgetClosed') === 'true') {
+            widget.classList.add('hidden');
+        }
+
+        minimizeBtn.addEventListener('click', function() {
+            widget.classList.toggle('minimized');
+            const icon = minimizeBtn.querySelector('i');
+            if (widget.classList.contains('minimized')) {
+                icon.className = 'fas fa-expand';
+            } else {
+                icon.className = 'fas fa-minus';
+            }
+        });
+
+        closeBtn.addEventListener('click', function() {
+            widget.classList.add('hidden');
+            sessionStorage.setItem('pipWidgetClosed', 'true');
+            // Pause iframe video if playing
+            const iframe = document.getElementById('pipIframe');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+        });
+    }
 });
+
+// Global form submission handler for Community Fair Registration Form
+function handleFairFormSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('communityFairForm');
+    const successMsg = document.getElementById('formSuccessMessage');
+    
+    if (form && successMsg) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}

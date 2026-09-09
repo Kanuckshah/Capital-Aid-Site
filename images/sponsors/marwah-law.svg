@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+  <!-- Scales of Justice Icon -->
+  <path d="M 35 15 V 42 M 23 23 H 47 M 23 23 L 17 33 H 29 Z M 47 23 L 41 33 H 53 Z M 27 42 H 43" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="32" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="800" font-size="16" letter-spacing="1">MARWAH</text>
+  <text x="60" y="46" fill="#a0a5b5" font-family="'Inter', sans-serif" font-weight="600" font-size="11" letter-spacing="2">LAW</text>
+</svg>

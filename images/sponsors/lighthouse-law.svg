@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60">
+  <rect width="260" height="60" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+  <!-- Lighthouse Icon -->
+  <path d="M 35 15 L 28 42 H 42 Z M 31 23 H 39 M 30 31 H 40 M 35 15 V 10" stroke="#ffb703" stroke-width="2.5" fill="none"/>
+  <circle cx="35" cy="12" r="2" fill="#ffb703"/>
+  <text x="52" y="30" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="800" font-size="15" letter-spacing="0.5">LIGHTHOUSE</text>
+  <text x="52" y="45" fill="#ffb703" font-family="'Inter', sans-serif" font-weight="600" font-size="10" letter-spacing="1">IMMIGRATION LAW</text>
+</svg>
